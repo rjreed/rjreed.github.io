@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ROCKY REED</title>
-    <atom:link href="http://rjreed.github.io/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>http://rjreed.github.io</link>
+    <atom:link href="http://rockyjreed.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://rockyjreed.com</link>
     <description>A Journal About Design &amp; Develpoment</description>
     <pubDate>Fri, 11 Apr 2014 15:00:00 -0500</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>Article Test</title>
-      <link>http://rjreed.github.io/articles/article-test/</link>
+      <link>http://rockyjreed.com/articles/article-test/</link>
       <pubDate>Fri, 11 Apr 2014 15:00:00 -0500</pubDate>
-      <guid isPermaLink="true">http://rjreed.github.io/articles/article-test/</guid>
+      <guid isPermaLink="true">http://rockyjreed.com/articles/article-test/</guid>
       <author></author>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -42,9 +42,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&g
     </item>
     <item>
       <title>Article Test 2</title>
-      <link>http://rjreed.github.io/articles/article-test-2/</link>
+      <link>http://rockyjreed.com/articles/article-test-2/</link>
       <pubDate>Tue, 18 Feb 2014 18:00:00 -0600</pubDate>
-      <guid isPermaLink="true">http://rjreed.github.io/articles/article-test-2/</guid>
+      <guid isPermaLink="true">http://rockyjreed.com/articles/article-test-2/</guid>
       <author></author>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -74,18 +74,18 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&g
     </item>
     <item>
       <title>Image Test</title>
-      <link>http://rjreed.github.io/articles/image-test/</link>
+      <link>http://rockyjreed.com/articles/image-test/</link>
       <pubDate>Sun, 01 Dec 2013 15:00:00 -0600</pubDate>
-      <guid isPermaLink="true">http://rjreed.github.io/articles/image-test/</guid>
+      <guid isPermaLink="true">http://rockyjreed.com/articles/image-test/</guid>
       <author></author>
-      <description>&lt;p&gt;&lt;a href=&quot;http://rjreed.github.io/articles/image-test/portrait1.jpg&quot; title=&quot;Self Portrait&quot;&gt;&lt;img src=&quot;http://rjreed.github.io/articles/image-test/portrait1.jpg&quot; alt=&quot;portrait&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&quot;http://rockyjreed.com/articles/image-test/portrait1.jpg&quot; title=&quot;Self Portrait&quot;&gt;&lt;img src=&quot;http://rockyjreed.com/articles/image-test/portrait1.jpg&quot; alt=&quot;portrait&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     <item>
       <title>Vivid Ephemera</title>
-      <link>http://rjreed.github.io/articles/vivid-ephemera/</link>
+      <link>http://rockyjreed.com/articles/vivid-ephemera/</link>
       <pubDate>Mon, 29 Apr 2013 19:00:00 -0500</pubDate>
-      <guid isPermaLink="true">http://rjreed.github.io/articles/vivid-ephemera/</guid>
+      <guid isPermaLink="true">http://rockyjreed.com/articles/vivid-ephemera/</guid>
       <author></author>
       <description>&lt;p&gt;It is not that I have no past. Rather, it continually fragments on the terrible and vivid ephemera of now. In the long country, cut with rain, somehow there is nowhere to begin. Loping and limping in the ruts, it would be easier not to think about what she did (was done to her, done to her, done), trying instead to reconstruct what it is at a distance. Oh, but it would not be so terrible had one calf not borne (if I’d look close, it would have been a chain of tiny wounds with moments of flesh between; I’ve done that myself with a swipe in a garden past a rose) that scratch.&lt;/p&gt;
 </description>
