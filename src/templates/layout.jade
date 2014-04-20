@@ -1,0 +1,35 @@
+doctype html
+block vars
+
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(name='viewport'
+             content='width=device-width, initial-scale=1.0')
+      title= locals.name
+        block title
+      link(rel='alternate'
+           href=locals.url+'/feed.xml'
+           type='application/rss+xml'
+           title=locals.description)
+      block styles
+        link(rel='stylesheet'
+            href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600')
+        link(rel='stylesheet'
+            href='/css/main.css')
+  body.wrap
+    header: h1.logo= locals.name
+      nav.nav-banner
+        ul.ul-nav
+          li.ni: a(href=locals.url) Blog
+          li.ni: a(href='#') Archive
+          li.ni: a(href='/about.html') About
+    main
+        block content
+    footer
+        block footer
+          section.about
+            block about
+          section.copy
+            p © #{ new Date().getFullYear() } #{ locals.owner }

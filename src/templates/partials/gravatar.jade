@@ -1,0 +1,10 @@
+svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='200px', height='200px')
+  filter(id="south", color-interpolation-filters="sRGB")
+    feBlend(mode="multiply")
+    feColorMatrix(type="saturate", values=".6")
+    feColorMatrix(values="1 0 0 0 .07, .97 0 0 0 .07, .98 0 0 0 .07, 0  0 0 1 0")
+    feComponentTransfer
+      feFuncR(type="gamma", amplitude=".97", exponent=".6", offset="-0.035")
+      feFuncG(type="gamma", amplitude=".97", exponent=".6", offset="-0.04")
+      feFuncB(type="gamma", amplitude=".97", exponent=".6", offset="-0.04")
+  image(xlink:href="https://2.gravatar.com/avatar/625b9fb3e1c25dc63aa9ce18f12a22b7?d=https%3A%2F%2Fidenticons.github.com%2Fe42b6b9e6b255d64d3566c9d5fee6dfd.png&r=x&s=460", x="0", y="0", width="200", height="200", filter="url(#south)")
