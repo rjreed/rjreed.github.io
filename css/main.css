@@ -37,12 +37,12 @@ h4 {
 }
 
 a {
-  color: #6699cc;
+  color: #518bbe;
   text-decoration: none;
 }
 
 a:hover {
-  color: #cc99cc;
+  color:#4c4690;
   text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ blockquote {
   margin: 0;
   color: #515151;
   padding-left: 2em;
-  border-left: 2px solid #8abeb7;
+  border-left: 2px solid #70d3e4;
 }
 
 img {
@@ -125,6 +125,14 @@ footer {
 
 .ni + .ni {
   margin-left: 2em;
+}
+
+.ni a {
+  color: #f88875;
+}
+
+.ni a:hover {
+  color: #b44b79;
 }
 
 .intro {
