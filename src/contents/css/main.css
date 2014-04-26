@@ -114,6 +114,7 @@ footer {
   float: right;
   list-style: none;
   padding: 0;
+  margin-bottom: .5em;
 }
 
 .ni {
@@ -144,6 +145,13 @@ footer {
   .wrap{
     width: 90%;
   }
+
+  .ul-nav {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
   .header-banner {
     font-size: 1.5em;
   }
