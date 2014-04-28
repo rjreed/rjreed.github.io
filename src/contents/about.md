@@ -2,9 +2,15 @@
 template: about.jade
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+##About this site
+
+This site is hosted on [GitHub](https://github.com/rjreed/rjreed.github.io).
+It's a series of static pages built using a Node JS static site generator. The content is authored using [Markdown](https://daringfireball.net/projects/markdown/).
+
+All of the code that went into building this site is free to use under the [MIT License](https://github.com/rjreed/rjreed.github.io/blob/master/LICENSE) and is hosted at the GitHub link above. You can use any of it however you want without reference to me whatsoever.
+
+All posts and original artwork (the content of the site) may only be used with permission. Shoot me an email if you want to use anything.
+
+##About me
+
+I try to create useful or interesting things. I like working in illustration and front-end development.

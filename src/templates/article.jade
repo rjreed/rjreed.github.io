@@ -11,7 +11,7 @@ block append styles
 block content
   article
     header.header-full
-      h1= page.title
+      h1.h1-full= page.title
       p.date= moment.utc(page.date).format('MMMM DD, YYYY')
     section.content!= typogr(page.html).typogrify()
 

@@ -55,10 +55,12 @@ strong {
 }
 
 blockquote {
-  margin: 0;
-  color: #515151;
-  padding-left: 2em;
   border-left: 2px solid #70d3e4;
+  color: #515151;
+  font-style: italic;
+  margin: 0;
+  padding-left: 2em;
+
 }
 
 img {
@@ -93,7 +95,6 @@ footer {
 
 .banner {
   min-height: 4em;
-
 }
 
 .wrap {
@@ -128,11 +129,11 @@ footer {
   margin-left: 2em;
 }
 
-.ni a {
+.ni a, .a-footer {
   color: #f88875;
 }
 
-.ni a:hover {
+.ni a:hover, .a-footer {
   color: #b44b79;
 }
 
@@ -144,6 +145,14 @@ footer {
   color: #999999;
   font-size: .8em;
   margin: 0;
+}
+
+.header-full {
+  text-align: center;
+}
+
+.h1-full {
+  font-size: 3em;
 }
 
 .a-footer + .a-footer {
