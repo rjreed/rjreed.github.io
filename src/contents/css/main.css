@@ -91,8 +91,9 @@ footer {
   position: absolute;
 }
 
-.header-intro {
-  margin-bottom: .2em;
+.banner {
+  min-height: 4em;
+
 }
 
 .wrap {
@@ -147,6 +148,20 @@ footer {
 
 .a-footer + .a-footer {
   margin-left: 2em;
+}
+
+.social-icon {
+  width: 2em;
+  height: 2em;
+  margin-right: .5em;
+}
+
+.social-icon:hover .hvr-fill {
+  fill: #4c4690;
+}
+
+.social-icon:hover .hvr-stroke {
+  stroke: #4c4690;
 }
 
 @media(max-width: 690px){
