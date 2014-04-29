@@ -133,7 +133,7 @@ footer {
   color: #f88875;
 }
 
-.ni a:hover, .a-footer {
+.ni a:hover, .a-footer:hover {
   color: #b44b79;
 }
 
