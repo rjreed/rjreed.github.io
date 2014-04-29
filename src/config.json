@@ -6,10 +6,12 @@
     "owner": "Rocky Reed",
     "description": "A Journal About Design & Develpoment",
     "gravatar": "http://www.gravatar.com/avatar/625b9fb3e1c25dc63aa9ce18f12a22b7?s=200",
-    "googlePlus": "https://plus.google.com/u/0/114518349948012113597?rel=author",
-    "twitter": "https://twitter.com/rockyjreed",
-    "gitHub": "https://github.com/rjreed",
-    "linkedIn": "https://www.linkedin.com/in/rockyjreed"
+    "accounts": {
+      "googlePlus": "https://plus.google.com/u/0/114518349948012113597?rel=author",
+      "twitter": "https://twitter.com/rockyjreed",
+      "gitHub": "https://github.com/rjreed",
+      "linkedIn": "https://www.linkedin.com/in/rockyjreed"
+    }
   },
   "plugins": [
     "./plugins/paginator.coffee"
