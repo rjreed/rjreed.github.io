@@ -1,8 +1,9 @@
 extends layout
 
+include partials/social-icons
+
 block content
   article
     section!= typogr(page.html).typogrify()
   article
-    section
-        include partials/socialicons
+    +social-icons('accounts')

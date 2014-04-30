@@ -1,4 +1,5 @@
 ---
+title: About
 template: about.jade
 ---
 

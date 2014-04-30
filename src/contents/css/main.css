@@ -159,18 +159,24 @@ footer {
   margin-left: 2em;
 }
 
-.social-icon {
+.social-icon-account {
   width: 2em;
   height: 2em;
   margin-right: .5em;
 }
 
-.social-icon:hover .hvr-fill {
-  fill: #4c4690;
+.social-icon-share {
+  width: 1.2em;
+  height: 1.2em;
+  margin: .5em .3em 0 .3em;
 }
 
-.social-icon:hover .hvr-stroke {
-  stroke: #4c4690;
+.social-icon-account path, .social-icon-share path {
+  fill: #518bbe;
+}
+
+.social-icon-account:hover path, .social-icon-share:hover path {
+  fill: #4c4690;
 }
 
 @media(max-width: 690px){
