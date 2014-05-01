@@ -159,7 +159,7 @@ footer {
   margin-left: 2em;
 }
 
-.social-icon-account {
+.social-icon-auth {
   width: 2em;
   height: 2em;
   margin-right: .5em;
@@ -171,11 +171,11 @@ footer {
   margin: .5em .3em 0 .3em;
 }
 
-.social-icon-account path, .social-icon-share path {
+.social-icon-auth path, .social-icon-share path {
   fill: #518bbe;
 }
 
-.social-icon-account:hover path, .social-icon-share:hover path {
+.social-icon-auth:hover path, .social-icon-share:hover path {
   fill: #4c4690;
 }
 
