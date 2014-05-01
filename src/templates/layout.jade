@@ -6,8 +6,9 @@ html(lang='en')
     block head
       meta(charset='utf-8')
       meta(name='viewport', content='width=device-width, initial-scale=1.0')
-      title= locals.name
+      title
         block title
+          =locals.owner
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
       block styles

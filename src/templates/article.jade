@@ -1,10 +1,9 @@
-
 extends layout
 
 include partials/social-icons
 
 block prepend title
-  | #{ ' - ' + page.title }
+  | #{ page.title + " - "}
 
 block append styles
   if page.metadata.code
