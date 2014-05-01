@@ -51,7 +51,15 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat.&lt;/p&gt;
 &lt;h2 id=&quot;this-is-an-h2-element&quot;&gt;This is an H2 element&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+&lt;pre&gt;&lt;code class=&quot;lang-javascript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; s = &lt;span class=&quot;string&quot;&gt;&quot;JavaScript syntax highlighting&quot;&lt;/span&gt;;
+alert(s);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-python&quot;&gt;s = &lt;span class=&quot;string&quot;&gt;&quot;Python syntax highlighting&quot;&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;No language indicated, so no syntax highlighting.
+But let&amp;#39;s throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -62,7 +70,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&g
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+&lt;p&gt;Consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Excepteur sint occaecat cupidatat non

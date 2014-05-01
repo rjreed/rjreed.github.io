@@ -3,9 +3,9 @@ extends layout
 include partials/social-icons
 
 block prepend title
-  | #{ page.title + " - "}
+  | #{ page.title + ' - '}
 
-block append styles
+block append css
   if page.metadata.code
     link(rel='stylesheet', href='/css/tomorrow.css')
 
