@@ -183,8 +183,10 @@ footer {
   .wrap{
     width: 90%;
   }
+}
 
-  .ul-nav {
+@media(max-width: 530px){
+.ul-nav {
     display: block;
     width: 100%;
     text-align: left;
