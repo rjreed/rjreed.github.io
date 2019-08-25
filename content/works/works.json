@@ -1,12 +1,101 @@
 {
-  "4141e825535db1a179ed194a9da63836": {
-    "title": "tttewr",
-    "artist": "",
-    "medium": "",
-    "size": "",
-    "date": "",
-    "id": "4141e825535db1a179ed194a9da63836",
-    "upload_date": 1566687732175,
-    "img": "./content/works/4141e825535db1a179ed194a9da63836/4141e825535db1a179ed194a9da63836.jpg"
+  "4ec942f607bf5b999ec55b355891255c": {
+    "title": "Growler with Peaches Study",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Linen Panel",
+    "size": "11\" x 14\"",
+    "date": "2018-08",
+    "available": "true",
+    "id": "4ec942f607bf5b999ec55b355891255c",
+    "upload_date": 1566751482456,
+    "img": "./content/works/4ec942f607bf5b999ec55b355891255c/4ec942f607bf5b999ec55b355891255c.jpg"
+  },
+  "54eab12d337252dca32507ac9eae6a81": {
+    "title": "Bottle, Book, and Box",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Linen Panel",
+    "size": "9\" x 12\"",
+    "date": "2018-08",
+    "available": "true",
+    "id": "54eab12d337252dca32507ac9eae6a81",
+    "upload_date": 1566751516908,
+    "img": "./content/works/54eab12d337252dca32507ac9eae6a81/54eab12d337252dca32507ac9eae6a81.jpg"
+  },
+  "93ea436dc7468cc01f1951be69b72706": {
+    "title": "Window Study",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Paper",
+    "size": "8.5\" x 11\"",
+    "date": "2018-08",
+    "available": "true",
+    "id": "93ea436dc7468cc01f1951be69b72706",
+    "upload_date": 1566751550023,
+    "img": "./content/works/93ea436dc7468cc01f1951be69b72706/93ea436dc7468cc01f1951be69b72706.jpg"
+  },
+  "102a0cd494075fde4854e4f98f6adc05": {
+    "title": "Jug Study",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "9\" x 12\"",
+    "date": "2019-08",
+    "available": "true",
+    "id": "102a0cd494075fde4854e4f98f6adc05",
+    "upload_date": 1566751587462,
+    "img": "./content/works/102a0cd494075fde4854e4f98f6adc05/102a0cd494075fde4854e4f98f6adc05.jpg"
+  },
+  "fd09c9a9c8ecddd3213fb52458f88149": {
+    "title": "Ayden",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "12\" x 12\"",
+    "date": "2018-08",
+    "available": "false",
+    "id": "fd09c9a9c8ecddd3213fb52458f88149",
+    "upload_date": 1566751618195,
+    "img": "./content/works/fd09c9a9c8ecddd3213fb52458f88149/fd09c9a9c8ecddd3213fb52458f88149.jpg"
+  },
+  "061178a34ef2cf83061b082381730970": {
+    "title": "Jug with Sunflower",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "12\" x 12\"",
+    "date": "2018-08",
+    "available": "true",
+    "id": "061178a34ef2cf83061b082381730970",
+    "upload_date": 1566751655731,
+    "img": "./content/works/061178a34ef2cf83061b082381730970/061178a34ef2cf83061b082381730970.jpg"
+  },
+  "68b5f0387bb9fed878e5872408f8ba89": {
+    "title": "Mirror",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Paper",
+    "size": "8.5\" x 11\"",
+    "date": "2018-08",
+    "available": "false",
+    "id": "68b5f0387bb9fed878e5872408f8ba89",
+    "upload_date": 1566751683281,
+    "img": "./content/works/68b5f0387bb9fed878e5872408f8ba89/68b5f0387bb9fed878e5872408f8ba89.jpg"
+  },
+  "25a05d7f221db3612aec88b15060b327": {
+    "title": "Growler Study",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Paper",
+    "size": "8.5\" x 11\"",
+    "date": "2018-08",
+    "available": "true",
+    "id": "25a05d7f221db3612aec88b15060b327",
+    "upload_date": 1566751707481,
+    "img": "./content/works/25a05d7f221db3612aec88b15060b327/25a05d7f221db3612aec88b15060b327.jpg"
+  },
+  "dadb31cfcb4b40e33ba5a4a020010f1b": {
+    "title": "Paint Tubes",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "14\" x 11\"",
+    "date": "2019-08",
+    "available": "true",
+    "id": "dadb31cfcb4b40e33ba5a4a020010f1b",
+    "upload_date": 1566751780734,
+    "img": "./content/works/dadb31cfcb4b40e33ba5a4a020010f1b/dadb31cfcb4b40e33ba5a4a020010f1b.jpg"
   }
 }

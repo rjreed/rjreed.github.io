@@ -44,6 +44,13 @@
     elements.lightbox.style.opacity = 0;
   });
  
- 
+  // add event listener to hide lightbox on escape keypress
+  document.addEventListener('keydown', function(event) {
+      const key = event.key;
+      if (key === "Escape") {
+         elements.lightbox.style.visibility = 'hidden';
+          elements.lightbox.style.opacity = 0;
+      }
+  });
  
 })();
