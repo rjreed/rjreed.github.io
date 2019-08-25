@@ -1,0 +1,262 @@
+/* BOX SIZING */
+ *, *:after, *:before {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+/* TAGS */
+ body, html {
+     height: 100%;
+     min-height: 100%;
+}
+ body {
+     font: 300 1rem 'Open Sans';
+     font-kerning: normal;
+     margin: 0 auto;
+   
+}
+ a {
+     text-decoration: none;
+}
+ hr {
+     border: 0;
+     border-top: 1px solid #e3e4e4;
+     display: block;
+     height: 1px;
+}
+/* CONTAINER GRID */
+ .container {
+     height: 100%;
+     max-width: 65em;
+     display: grid;
+     grid-template-areas : "header" "content" "footer";
+     grid-template-rows: 5em 1fr 3em;
+     grid-gap: 1em;
+     padding-left: 10px;
+     padding-right: 10px;
+     position: relative;
+}
+ .header {
+     grid-area: header;
+     z-index: 10;
+}
+ .content {
+     grid-area: content;
+     width: 100%;
+     align-self: start;
+}
+ .footer {
+     grid-area: footer;
+     display: grid;
+     border-top: 1px solid #e3e4e4;
+     height: 3rem;
+     align-items: center;
+     font-size: .8rem;
+}
+/* NAVBAR SUBGRID */
+ .navbar {
+     background-color: white;
+     display: grid;
+     grid-template-columns: auto 1fr auto;
+     grid-template-areas: "a b c";
+     align-items: center;
+     height: 100%;
+     border-bottom: 1px solid #e3e4e4;
+}
+ .navbar_title {
+     font: 400 2em 'Crimson Text';
+     color: #34434b;
+}
+ label:hover, label:active, input:hover+label, input:active+label {
+     cursor: pointer 
+}
+ .navbar_menu {
+     justify-self: end;
+     letter-spacing: 0.15rem;
+}
+ .navbar_menu_dropdown {
+     background-color: white;
+     max-height: 0;
+     transition: max-height 0.35s ease;
+     overflow: hidden;
+     z-index: 10;
+}
+ .navbar_menu_dropdown_link {
+     padding: 10px;
+     width: 100%;
+     display: block;
+     text-align: center;
+     color: #3b3b3b;
+}
+ .navbar_menu_dropdown_link:hover {
+     background-color: whitesmoke;
+}
+ #expand-toggle {
+     display: none;
+}
+ #expand-toggle:checked ~ .navbar_menu_dropdown {
+     max-height: 500px;
+     transition: max-height 0.35s ease;
+}
+/* GALLERY SUBGRID */
+ .gallery {
+     display: flex;
+     max-height: 100%;
+     flex-wrap: wrap;
+     align-items: stretch;
+}
+ .gallery_item {
+     flex: 0 1 33%;
+     display: flex;
+     max-height: 100%;
+     flex-wrap: wrap;
+     align-items: flex-end;
+     justify-content: center;
+     padding: 0.5rem;
+}
+ .gallery_item:hover {
+     cursor: pointer;
+}
+ .gallery_item_figure {
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+     max-width: 100%;
+     max-height: 100%;
+     align-self: center;
+}
+ .gallery_item:hover .gallery_item_figure {
+     box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.2);
+}
+ .gallery_item_caption {
+     margin-top: 0.5rem;
+     justify-self: center;
+     color: #737373;
+}
+/* DETAIL SUBGRID */
+ .detail {
+     display: grid;
+     grid-template-areas: "cap img";
+     grid-gap: 3em;
+     grid-template-columns: max-content;
+}
+ .detail_item {
+     grid-area: img;
+}
+ .detail_caption {
+     grid-area: cap;
+}
+ .detail_item {
+     max-width: 100%;
+}
+ .detail_caption {
+     font-size: .8rem;
+}
+ .detail_caption_title {
+     font-size: 1rem;
+     padding-bottom: 1rem;
+}
+
+ @media screen and (max-width: 720px) {
+     .detail {
+         grid-template-areas: "img" "cap";
+         grid-template-columns: 1fr;
+         grid-gap: 1em;
+    }
+}
+/* SPLASH SUBGRID */
+ .splash {
+     display: grid;
+}
+ .splash_img {
+     width: 100%;
+}
+/* CONTACT SUBGRID */
+ .contact_form {
+     width: 20rem;
+     margin: 0 auto;
+}
+ .contact_form_input {
+     border: none;
+     border: 1px solid #e3e4e4;
+     display: block;
+     margin-bottom: 1rem;
+     width: 20rem;
+     padding: 10px;
+}
+ .contact_social_line {
+}
+ .contact_social_line_text {
+     display: inline-block;
+     line-height: 1.5rem;
+     vertical-align: top;
+     padding-left: 0.5rem;
+}
+ .contact_social_line:hover {
+}
+ .contact_social_icon {
+     height: 1.5rem;
+     line-height: 1.5rem;
+     vertical-align: middle;
+}
+ .input_message {
+     height: 25rem;
+}
+ .input_submit {
+     display: block;
+     margin: 0 auto;
+     width: 100px;
+     padding: 0;
+     text-align: center;
+     line-height: 30px;
+     background-color: whitesmoke;
+     border-radius: 5px;
+     transition: all 0.2s ;
+     border: 0;
+}
+ .input_submit:hover {
+     background-color: grey;
+     cursor: pointer;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    visibility: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 19, 19, 0.85);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+}
+
+.lightbox_form {
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.lightbox_message {
+    height: 5rem;
+}
+
+.enquire_btn {
+    margin-left: 0;
+}
+
+.close_btn {
+    color: white;
+    float: right;
+    margin-bottom: 0.5rem;
+}
+
+.close_btn:hover {
+    cursor: pointer;
+}
