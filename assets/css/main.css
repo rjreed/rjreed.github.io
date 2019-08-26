@@ -232,6 +232,7 @@
     top: 0;
     left: 0;
     transition:visibility 0.3s linear,opacity 0.3s linear;
+    z-index: 999;
 }
 
 .lightbox_form {
