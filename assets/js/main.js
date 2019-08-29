@@ -1,17 +1,18 @@
 (function() {
   function menuSlider() {
+    // define css selector classes
     const classes = {
-      dropdown: 'navbar_menu_dropdown',
       toggle: 'navbar_menu_toggle',
       header: 'header'
     };
 
+    // get nodes based off above css selector classes
     const elements = {
-      dropdown: document.getElementsByClassName(classes.dropdown)[0],
       toggle: document.getElementsByClassName(classes.toggle)[0],
       header: document.getElementsByClassName(classes.header)[0]
     };
-
+    
+    // add event listener to uncheck toggle element if the dropdown menu is open and the click is outside the header element, which hides the dropdown menu
     document.onclick = function(e) {
       if (!elements.header.contains(event.target) && elements.toggle.checked) {
         elements.toggle.checked = false;
