@@ -87,17 +87,6 @@
     "upload_date": 1566751707481,
     "img": "./content/works/25a05d7f221db3612aec88b15060b327/25a05d7f221db3612aec88b15060b327.jpg"
   },
-  "dadb31cfcb4b40e33ba5a4a020010f1b": {
-    "title": "Paint Tubes",
-    "artist": "Rocky Reed",
-    "medium": "Oil on Canvas Panel",
-    "size": "14\" x 11\"",
-    "date": "2019-08",
-    "available": "true",
-    "id": "dadb31cfcb4b40e33ba5a4a020010f1b",
-    "upload_date": 1566751780734,
-    "img": "./content/works/dadb31cfcb4b40e33ba5a4a020010f1b/dadb31cfcb4b40e33ba5a4a020010f1b.jpg"
-  },
   "d758731f7d1e0238bf9498ff747a8b6d": {
     "title": "Dutch Pitcher",
     "artist": "Rocky Reed",
@@ -108,5 +97,19 @@
     "id": "d758731f7d1e0238bf9498ff747a8b6d",
     "upload_date": 1567100626527,
     "img": "./content/works/d758731f7d1e0238bf9498ff747a8b6d/d758731f7d1e0238bf9498ff747a8b6d.jpg"
+  },
+  "f27e800c10b4aa09d22f63c8cf1113ed": {
+    "title": "Paint Tubes ",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "14\" x 11\"",
+    "date": "2019-08",
+    "available": "true",
+    "id": "f27e800c10b4aa09d22f63c8cf1113ed",
+    "upload_date": 1567256629360,
+    "additional_imgs": [
+      "./content/works/f27e800c10b4aa09d22f63c8cf1113ed/f27e800c10b4aa09d22f63c8cf1113ed_1.jpg"
+    ],
+    "img": "./content/works/f27e800c10b4aa09d22f63c8cf1113ed/f27e800c10b4aa09d22f63c8cf1113ed_0.jpg"
   }
 }

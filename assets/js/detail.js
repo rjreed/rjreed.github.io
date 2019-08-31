@@ -8,7 +8,9 @@
     title: 'detail_caption_title',
     medium: 'detail_caption_medium',
     size: 'detail_caption_size',
-    date: 'detail_caption_date'
+    date: 'detail_caption_date',
+    additional: 'detail_additional',
+    additional_figure: 'detail_additional_figure'
   };
 
   // get nodes based off above css selector classes
@@ -20,7 +22,8 @@
     title: document.getElementsByClassName(classes.title)[0],
     medium: document.getElementsByClassName(classes.medium)[0],
     size: document.getElementsByClassName(classes.size)[0],
-    date: document.getElementsByClassName(classes.date)[0]
+    date: document.getElementsByClassName(classes.date)[0],
+    additional: document.getElementsByClassName(classes.additional)[0]
   };
 
   // get the id provided in the window URL
@@ -36,6 +39,47 @@
     elements.medium.innerText = meta.medium;
     elements.size.innerText = meta.size;
     elements.date.innerText = meta.date.split('-')[0];
+
+    // check if the work has additional images
+    if (meta.additional_imgs.length) {
+      // if so iterate through the array of them and create an img element for them, appending them to the dom
+      for (let i = 0, len = meta.additional_imgs.length; i < len; i++) {
+        const newFigure = document.createElement('img');
+
+        newFigure.setAttribute('src', meta.additional_imgs[i]);
+        newFigure.setAttribute('class', classes.additional_figure);
+
+        elements.additional.appendChild(newFigure)
+
+        // add event listener to the img to swap it with main img on click
+        newFigure.addEventListener('click', swapImagesHandler);
+
+      }
+    }
+
+  }
+
+  function swapImagesHandler(e) {
+    // store the src attributes for both elements for later reference
+    const src1 = e.target.getAttribute('src');
+    const src2 = elements.item.getAttribute('src');
+
+    // change the link href to match the additional img's src
+    elements.link.setAttribute('href', src1);
+
+    //hide both imgs
+    e.target.style.opacity = 0;
+    elements.item.style.opacity = 0;
+
+    //swap the src attributes and show the images after 350 ms, which matches the css transition property time
+    setTimeout(function() {
+      elements.item.setAttribute('src', src1);
+      e.target.setAttribute('src', src2)
+      e.target.style.opacity = 1;
+      elements.item.style.opacity = 1;
+
+    }, 350)
+
   }
 
   // Create XHR to get works list JSON and run detailBuilder on it
