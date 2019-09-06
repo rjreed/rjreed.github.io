@@ -106,7 +106,7 @@
      align-items: stretch;
 }
  .gallery_item {
-     flex: 0 1 33%;
+     flex: 0 1 25%;
      display: flex;
      max-height: 100%;
      flex-wrap: wrap;
@@ -132,6 +132,11 @@
      margin-top: 0.5rem;
      justify-self: center;
      color: #737373;
+}
+ @media screen and (max-width: 720px) {
+     .gallery_item {
+         flex: 0 1 33%;
+    }
 }
 /* DETAIL SUBGRID */
  .detail {
