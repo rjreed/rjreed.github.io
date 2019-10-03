@@ -10,8 +10,9 @@
 
     const header_el = document.getElementsByClassName(hooks.header)[0];
     const dropdown_el = document.getElementsByClassName(hooks.dropdown)[0];
-
-    let dropdown_height = 0;
+    // hack since scrollheight is returning an inconsistent value
+    let dropdown_height =
+      (dropdown_el.scrollHeight > 167 ? dropdown_el.scrollHeight : 175) + "px";
 
     function clickHandler(e) {
       if (!dropdown_visible && e.target.classList.contains(hooks.toggle)) {
@@ -29,13 +30,6 @@
         dropdown_el.style.maxHeight = 0;
       }
     }
-
-    function setupDropdown() {
-      dropdown_height = dropdown_el.scrollHeight + "px";
-      dropdown_el.style.maxHeight = "0px";
-    }
-
-    window.setTimeout(setupDropdown, 50);
 
     document.addEventListener("click", clickHandler);
   }
