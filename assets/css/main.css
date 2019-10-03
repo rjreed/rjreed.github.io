@@ -75,8 +75,7 @@
      letter-spacing: 0.15rem;
 }
  .navbar_menu_dropdown {
-     background-color: white;
-     max-height: 0;
+     background-color: #f7f7f7;
      transition: max-height 0.35s ease;
      overflow: hidden;
      z-index: 10;
@@ -89,15 +88,13 @@
      color: #3b3b3b;
 }
  .navbar_menu_dropdown_link:hover {
-     background-color: whitesmoke;
+     background-color: #cfcfcf;
 }
- #expand-toggle {
-     display: none;
+
+.js-dropdown-toggle {
+  cursor: pointer;
 }
- #expand-toggle:checked ~ .navbar_menu_dropdown {
-     max-height: 500px;
-     transition: max-height 0.35s ease;
-}
+
 /* GALLERY SUBGRID */
  .gallery {
      display: flex;
@@ -231,7 +228,7 @@
      border: 0;
 }
  .input_submit:hover {
-     background-color: grey;
+     background-color: #C0C0C0;
      cursor: pointer;
 }
 

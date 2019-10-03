@@ -1,73 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Rocky J. Reed</title>
-    <meta name="description" content="The art of Rocky J. Reed">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="description" content="The art of Rocky J. Reed" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,400"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="/assets/js/main.js" defer></script>
+  </head>
 
-</head>
-
-<body class="container">
-
+  <body class="container">
     <section class="header">
-        <div class="navbar">
-            <div class="navbar_item">
-                <a href="/" class="navbar_link navbar_title">Rocky J. Reed</a>
-            </div>
-            <div class="navbar-item"></div>
-            <label for="expand-toggle" class="navbar-item navbar_menu">
-                MENU
-            </label>
+      <div class="navbar">
+        <div class="navbar_item">
+          <a href="/" class="navbar_link navbar_title">Rocky J. Reed</a>
         </div>
-        <input type="checkbox" id="expand-toggle" class="navbar_menu_toggle"/>
-        <div class="navbar_menu_dropdown">
-            <a href="/works.html" class="navbar_menu_dropdown_link">Works</a>
-            <a href="/blog.html" class="navbar_menu_dropdown_link">Blog</a>
-            <a href="/contact.html" class="navbar_menu_dropdown_link">About & Contact</a>
-            <label class="navbar_menu_dropdown_link hover-hand" for="expand-toggle">X</label>
+        <div class="navbar-item"></div>
+        <div class="navbar-item navbar_menu js-dropdown-toggle">
+          MENU
         </div>
+      </div>
+      <div class="navbar_menu_dropdown js-dropdown">
+        <a href="/works.html" class="navbar_menu_dropdown_link">Works</a>
+        <a href="/blog.html" class="navbar_menu_dropdown_link">Blog</a>
+        <a href="/contact.html" class="navbar_menu_dropdown_link"
+          >About & Contact</a
+        >
+        <div class="navbar_menu_dropdown_link hover-hand js-dropdown-toggle">
+          X
+        </div>
+      </div>
     </section>
 
     <section class="content contact">
-        <div class="contact_social_line">
-            <a href="https://www.instagram.com/rockyreedart/" target="_blank"><img class="contact_social_icon" src="https://cdn.glitch.com/a7eb96cc-f0a2-455d-83ed-f4e5253d37a4%2FInstagram_simple_icon.svg?v=1564945999019"><img><span class="contact_social_line_text">Instagram</span></a>
-            <hr>
+      <div class="contact_social_line">
+        <a href="https://www.instagram.com/rockyreedart/" target="_blank"
+          ><img
+            class="contact_social_icon"
+            src="https://cdn.glitch.com/a7eb96cc-f0a2-455d-83ed-f4e5253d37a4%2FInstagram_simple_icon.svg?v=1564945999019"
+          /><img /><span class="contact_social_line_text">Instagram</span></a
+        >
+        <hr />
+      </div>
+      <div>
+        <p>
+          Send me a message:
+        </p>
+      </div>
+      <form
+        class="contact_form"
+        action="https://formspree.io/rockyjreed@gmail.com"
+        method="post"
+        accept-charset="utf-8"
+      >
+        <div>
+          <input
+            type="text"
+            class="contact_form_input input_name"
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            class="contact_form_input input_email"
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            class="contact_form_input input_subject"
+            placeholder="Subject"
+          />
         </div>
         <div>
-            <p>
-                Send me a message:
-            </p>
+          <textarea
+            name="message"
+            type="text"
+            class="contact_form_input input_message"
+            placeholder="Message"
+          ></textarea>
         </div>
-        <form class="contact_form" action="https://formspree.io/rockyjreed@gmail.com" method="post" accept-charset="utf-8">
-            <div>
-                <input type="text" class="contact_form_input input_name" placeholder="Name">
-                <input type="email" class="contact_form_input input_email" placeholder="Email">
-                <input type="text" class="contact_form_input input_subject" placeholder="Subject">
-            </div>
-            <div>
-                <textarea name="message" type="text" class="contact_form_input input_message" placeholder="Message"></textarea>
-            </div>
-            <input type="submit" value="Send" class="input_submit">
-        </form>
-        <hr>
+        <input type="submit" value="Send" class="input_submit" />
+      </form>
+      <hr />
 
-        <div>
-            <p>
-                This site was made from scratch by me. If you want to reverse-engineer any of the code from it and use it go ahead, codebase is available <a href="https://github.com/rjreed/rjreed.github.io" target="_blank">here</a>. All the code for the site is licensed under the <a href="https://opensource.org/licenses/0BSD" target="_blank">Zero-Clause BSD License</a>.
-            </p>
-        </div>
+      <div>
+        <p>
+          This site was made from scratch by me. If you want to reverse-engineer
+          any of the code from it and use it go ahead, codebase is available
+          <a href="https://github.com/rjreed/rjreed.github.io" target="_blank"
+            >here</a
+          >. All the code for the site is licensed under the
+          <a href="https://opensource.org/licenses/0BSD" target="_blank"
+            >Zero-Clause BSD License</a
+          >.
+        </p>
+      </div>
     </section>
 
     <section class="footer">
-        © Rocky Reed 2019
+      © Rocky Reed 2019
     </section>
-
-</body>
-
+  </body>
 </html>

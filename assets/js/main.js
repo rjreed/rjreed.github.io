@@ -1,25 +1,41 @@
 (function() {
   function menuSlider() {
-    // define css selector classes
-    const classes = {
-      toggle: 'navbar_menu_toggle',
-      header: 'header'
+    const hooks = {
+      toggle: "js-dropdown-toggle",
+      dropdown: "js-dropdown",
+      header: "header"
     };
 
-    // get nodes based off above css selector classes
-    const elements = {
-      toggle: document.getElementsByClassName(classes.toggle)[0],
-      header: document.getElementsByClassName(classes.header)[0]
-    };
-    
-    // add event listener to uncheck toggle element if the dropdown menu is open and the click is outside the header element, which hides the dropdown menu
-    document.onclick = function(e) {
-      if (!elements.header.contains(event.target) && elements.toggle.checked) {
-        elements.toggle.checked = false;
+    let dropdown_visible = false;
+
+    const header_el = document.getElementsByClassName(hooks.header)[0];
+    const dropdown_el = document.getElementsByClassName(hooks.dropdown)[0];
+
+    let dropdown_height = 0;
+
+    function clickHandler(e) {
+      if (!dropdown_visible && e.target.classList.contains(hooks.toggle)) {
+        dropdown_visible = true;
+        dropdown_el.style.maxHeight = dropdown_height;
+      } else if (
+        dropdown_visible &&
+        (e.target.classList.contains(hooks.toggle) ||
+          !header_el.contains(e.target))
+      ) {
+        dropdown_visible = false;
+        dropdown_el.style.maxHeight = 0;
       }
     }
+
+    function setupDropdown() {
+      dropdown_height = dropdown_el.scrollHeight + "px";
+      dropdown_el.style.maxHeight = "0px";
+    }
+
+    window.setTimeout(setupDropdown, 50);
+
+    document.addEventListener("click", clickHandler);
   }
 
   menuSlider();
-
 })();
