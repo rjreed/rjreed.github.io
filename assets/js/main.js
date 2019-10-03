@@ -19,18 +19,13 @@
         dropdown_visible = true;
         dropdown_el.style.maxHeight = dropdown_height;
       } else if (
-        dropdown_visible &&
-        (e.target.classList.contains(hooks.toggle) ||
-          !header_el.contains(e.target))
+        (dropdown_visible && e.target.classList.contains(hooks.toggle)) ||
+        !dropdown_el.contains(e.target)
       ) {
-        dropdown_visible = false;
-        dropdown_el.style.maxHeight = 0;
-      } else if (dropdown_visible && !dropdown_el.contains(e.target)) {
         dropdown_visible = false;
         dropdown_el.style.maxHeight = 0;
       }
     }
-
     document.addEventListener("click", clickHandler);
   }
 
