@@ -24,6 +24,9 @@
       ) {
         dropdown_visible = false;
         dropdown_el.style.maxHeight = 0;
+      } else if (dropdown_visible && !dropdown_el.contains(e.target)) {
+        dropdown_visible = false;
+        dropdown_el.style.maxHeight = 0;
       }
     }
 
