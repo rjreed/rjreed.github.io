@@ -13,9 +13,9 @@ html {
   min-height: 100%;
 }
 body {
-  font: 300 1rem "Open Sans";
-  font-kerning: normal;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 a {
   text-decoration: none;
@@ -34,8 +34,6 @@ hr {
   grid-template-areas: "header" "content" "footer";
   grid-template-rows: 5em 1fr 3em;
   grid-gap: 1em;
-  padding-left: 10px;
-  padding-right: 10px;
   position: relative;
 }
 .header {
@@ -66,9 +64,8 @@ hr {
   border-bottom: 1px solid #e3e4e4;
 }
 .navbar_title {
-  font: 400 2em "Crimson Text";
-  color: #34434b;
 }
+
 label:hover,
 label:active,
 input:hover + label,
@@ -141,7 +138,6 @@ input:active + label {
   margin-top: 0.5rem;
   justify-self: center;
   text-align: center;
-  color: #737373;
 }
 @media screen and (max-width: 720px) {
   .gallery_item {
@@ -156,19 +152,18 @@ input:active + label {
 }
 /* DETAIL SUBGRID */
 .detail {
-  display: grid;
-  grid-template-areas: "cap img";
+  display: flex;
   grid-gap: 3em;
-  grid-template-columns: max-content;
+  flex-direction: row-reverse;
 }
 .detail_item {
   grid-area: img;
 }
 .detail_caption {
-  grid-area: cap;
+  margin-right: 3rem;
 }
 .detail_item {
-  max-width: 100%;
+  width: 100%;
   transition: all 0.35s;
 }
 .detail_additional {
@@ -181,19 +176,18 @@ input:active + label {
   max-height: 100%;
   max-width: 5rem;
 }
-.detail_caption {
-  font-size: 0.8rem;
-}
+
 .detail_caption_title {
-  font-size: 1rem;
   padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 720px) {
   .detail {
-    grid-template-areas: "img" "cap";
-    grid-template-columns: 1fr;
-    grid-gap: 1em;
+    flex-direction: column;
+  }
+
+  .detail_caption {
+    margin-right: 0;
   }
 }
 /* SPLASH SUBGRID */

@@ -27,7 +27,20 @@
   };
 
   // get the id provided in the window URL
-  const id = new URL(document.location).searchParams.get("id");
+  //const id = new URL(document.location).searchParams.get("id");
+
+  const query_string = (function(a) {
+    if (a == "") return {};
+    let b = {};
+    for (let i = 0; i < a.length; ++i) {
+      let p = a[i].split("=", 2);
+      if (p.length == 1) b[p[0]] = "";
+      else b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+  })(window.location.search.substr(1).split("&"));
+
+  const id = query_string["id"];
 
   // set attributes of the detail element based of parsed data
   const detailBuilder = function() {

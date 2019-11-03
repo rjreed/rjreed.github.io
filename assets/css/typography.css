@@ -1,0 +1,216 @@
+body {
+  line-height: 1.375em;
+  font: 300 1rem "Open Sans";
+  color: #1d1f21;
+  font-kerning: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #1d1f21;
+}
+
+/* FONT SIZING */
+
+.xs {
+  font-size: 0.5rem;
+}
+
+.sm {
+  font-size: 0.8rem;
+}
+
+.med {
+  font-size: 1rem;
+}
+
+.lg {
+  font-size: 1.25rem;
+}
+
+.xl {
+  font-size: 1.5rem;
+}
+
+.xxl {
+  font-size: 2rem;
+}
+
+/* FONT WEIGHTS */
+
+.hairline {
+  font-weight: 100;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.heavy {
+  font-weight: 900;
+}
+
+/* FONT FAMILIES */
+
+.sans {
+  font-family: "Open Sans";
+}
+
+.serif {
+  font-family: "Crimson Text";
+}
+
+.handwritten {
+  font-family: "Ma Shan Zheng", cursive;
+}
+
+/* FONT COLORS */
+
+.light-grey {
+  color: #DADADA;
+}
+
+.medium-grey {
+  color: #999999;
+}
+
+.dark-grey {
+  color: #4d4d4d;
+}
+
+.off-black {
+  color: #1d1f21;
+}
+
+.orange {
+  color: #f99157;
+}
+
+.hover-orange:hover {
+  color: #f99157;
+}
+
+.light-green {
+  color: #c3e88d;
+}
+
+.hover-light-green:hover {
+  color: #c3e88d;
+}
+
+.light-violet {
+  color: #BB80B3;
+}
+
+.hover-light-violet:hover{
+  color: #BB80B3;
+}
+
+.violet {
+  color: #945EB8;
+}
+
+.hover-violet:hover {
+  color: #945EB8;
+}
+
+.yellow-orange {
+  color: #FFB62C;
+}
+
+.hover-yellow-orange:hover{
+  color: #FFB62C;
+}
+
+.yellow {
+  color: #FFCB6B;
+}
+
+.hover-yellow:hover {
+  color: #FFCB6B;
+}
+
+.green {
+  color: #91B859;
+}
+
+.hover-green:hover {
+  color: #91B859;
+}
+
+.light-blue {
+  color: #B2CCD6;
+}
+
+.hover-light-blue:hover {
+  color: #B2CCD6;
+}
+
+.blue {
+  color: #6182B8;
+}
+
+.hover-blue:hover {
+  color: #6182B8;
+}
+
+.light-red {
+  color: #f2777a;
+}
+
+.hover-light-red:hover {
+  color: #f2777a;
+}
+
+.red {
+  color: #E53935;
+}
+
+.hover-red:hover {
+  color: #E53935;
+}
+
+/* GROUPED STYLES */
+
+.large-label {
+  font: 400 1.3rem "Open Sans";
+}
+
+.medium-label {
+  font: 600 1rem "Open Sans";
+  color: #999999;
+}
+
+.drop-cap::first-letter {
+  font-size: 2rem;
+  color: #E53935;
+  font-weight: 600;
+}
+
+.gallery_item_caption {
+  color: #737373;
+}
