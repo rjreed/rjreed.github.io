@@ -153,11 +153,9 @@ input:active + label {
 /* DETAIL SUBGRID */
 .detail {
   display: flex;
-  grid-gap: 3em;
   flex-direction: row-reverse;
 }
 .detail_item {
-  grid-area: img;
 }
 .detail_caption {
   margin-right: 3rem;
