@@ -17,27 +17,46 @@
   </head>
 
   <body class="container">
-    <section class="header">
-      <div class="navbar">
-        <div class="navbar_item">
-          <a href="/" class="navbar_link navbar_title serif dark-grey xxl">Rocky J. Reed</a>
+   
+    <header class="header">
+      <section class="banner">
+        <div class="banner-item banner-title serif dark-grey xxl">
+          <a class="banner-title" href="/">Rocky J. Reed</a>
         </div>
-        <div class="navbar-item"></div>
-        <div class="navbar-item navbar_menu js-dropdown-toggle">
-          MENU
+        <div class="banner-item banner-gap"></div>
+
+        <div class="banner-item navbar">
+          <div class="navbar-item">
+            <a class="navbar-link" href="/works.html">Works</a>
+          </div>
+          <div class="navbar-item">
+            <a class="navbar-link" href="/blog.html">Blog</a>
+          </div>
+          <div class="navbar-item">
+            <a class="navbar-link" href="/contact.html">About & Contact</a>
+          </div>
         </div>
-      </div>
-      <div class="navbar_menu_dropdown js-dropdown">
-        <a href="/works.html" class="navbar_menu_dropdown_link">Works</a>
-        <a href="/blog.html" class="navbar_menu_dropdown_link">Blog</a>
-        <a href="/contact.html" class="navbar_menu_dropdown_link"
-          >About & Contact</a
-        >
-        <div class="navbar_menu_dropdown_link hover-hand js-dropdown-toggle">
-          X
+
+        <div class="header-item menu js-dropdown-toggle js-dropdown-container">
+          <div class="menu-button js-dropdown-toggle hover-medium-grey">MENU</div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="dropdown js-dropdown js-dropdown-container">
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/works.html">Works</a>
+        </div>
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/blog.html">Blog</a>
+        </div>
+        <div class="dropdown-item">
+          <a class="dropdown-link" href="/contact.html">About & Contact</a>
+        </div>
+        <div class="dropdown-item">
+          <a class="dropdown-link js-dropdown-toggle bold" href="#">X</a>
+        </div>
+      </section>
+    </header>
 
     <section class="content gallery dark-grey"></section>
 

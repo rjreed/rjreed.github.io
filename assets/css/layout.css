@@ -36,10 +36,7 @@ hr {
   grid-gap: 1em;
   position: relative;
 }
-.header {
-  grid-area: header;
-  z-index: 10;
-}
+
 .content {
   grid-area: content;
   width: 100%;
@@ -54,15 +51,7 @@ hr {
   font-size: 0.8rem;
 }
 /* NAVBAR SUBGRID */
-.navbar {
-  background-color: white;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas: "a b c";
-  align-items: center;
-  height: 100%;
-  border-bottom: 1px solid #e3e4e4;
-}
+
 .navbar_title {
 }
 
@@ -72,30 +61,113 @@ input:hover + label,
 input:active + label {
   cursor: pointer;
 }
-.navbar_menu {
-  justify-self: end;
-  letter-spacing: 0.15rem;
+
+.header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
-.navbar_menu_dropdown {
-  background-color: #f7f7f7;
-  transition: max-height 0.35s ease;
-  overflow: hidden;
+.banner {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  align-items: center;
+  justify-items: flex-end;
+  border-bottom: 1px solid #DADADA;
+}
+
+
+
+.banner-gap {
+  flex-grow: 1;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item {
+  font-weight: 300;
+  height: 100%;
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+.navbar-link {
+  display: block;
+  height: 100%;
+}
+
+.navbar-link:hover {
+  text-shadow: 0.2px 0px 0px #999999;
+  color: #999999;
+}
+
+.navbar-item + .navbar-item {
+  margin-left: 1.5rem;
+}
+
+
+.menu {
+  display: none;
+}
+
+.menu-button {
+  cursor: pointer;
+}
+
+
+.dropdown {
+  position: absolute;
+  top: 5rem;
   z-index: 10;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background-color: #f7f7f7;
   max-height: 0;
 }
-.navbar_menu_dropdown_link {
-  padding: 10px;
+
+
+.dropdown-item {
+  height: 2.5rem;
+  line-height: 2.5rem;
   width: 100%;
   display: block;
   text-align: center;
-  color: #3b3b3b;
 }
-.navbar_menu_dropdown_link:hover {
-  background-color: #cfcfcf;
+
+.dropdown-link {
+  width: 100%;
+  display: block;
+  text-align: center;
 }
+
+.dropdown-link:hover {
+  background-color: #DADADA;
+}
+
 
 .js-dropdown-toggle {
   cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .menu {
+    display: flex;
+  }
+  .header {
+  }
+  .navbar {
+    display: none;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
 }
 
 /* GALLERY SUBGRID */

@@ -94,7 +94,15 @@ a {
   color: #DADADA;
 }
 
+.hover-light-grey:hover {
+  color: #DADADA;
+}
+
 .medium-grey {
+  color: #999999;
+}
+
+.hover-medium-grey:hover {
   color: #999999;
 }
 
@@ -102,7 +110,15 @@ a {
   color: #4d4d4d;
 }
 
+.hover-dark-grey:hover {
+  color: #4d4d4d;
+}
+
 .off-black {
+  color: #1d1f21;
+}
+
+.hover-off-black:hover {
   color: #1d1f21;
 }
 
