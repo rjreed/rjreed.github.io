@@ -52,6 +52,11 @@
     elements.medium.innerText = meta.medium;
     elements.size.innerText = meta.size;
     elements.date.innerText = meta.date.split("-")[0];
+    
+    // check if the work is available
+    if (!meta.available) {
+      
+    }
 
     // check if the work has additional images
     if (meta.additional_imgs.length) {
