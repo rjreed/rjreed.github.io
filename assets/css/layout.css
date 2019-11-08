@@ -225,7 +225,7 @@ input:active + label {
 /* DETAIL SUBGRID */
 .detail {
   display: flex;
- 
+  flex-direction: row-reverse;
 }
 .detail_item {
 }
