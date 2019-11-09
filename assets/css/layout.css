@@ -92,6 +92,10 @@ input:active + label {
   height: 100%;
   flex-grow: 1;
   padding: 0.5rem;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
 }
 
 .navbar-link {
@@ -99,7 +103,7 @@ input:active + label {
   height: 100%;
 }
 
-.navbar-link:hover {
+.navbar-item:hover {
   text-shadow: 0.2px 0px 0px #999999;
   color: #999999;
 }
@@ -144,7 +148,7 @@ input:active + label {
   text-align: center;
 }
 
-.dropdown-link:hover {
+.dropdown-item:hover {
   background-color: #DADADA;
 }
 
