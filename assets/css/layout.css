@@ -76,15 +76,14 @@ input:active + label {
   border-bottom: 1px solid #DADADA;
 }
 
-
-
 .banner-gap {
   flex-grow: 1;
 }
 
 .navbar {
   display: flex;
-  align-items: center;
+  align-content: center;
+  height: 100%;
 }
 
 .navbar-item {
