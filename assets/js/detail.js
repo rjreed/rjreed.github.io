@@ -59,7 +59,7 @@
     }
 
     // check if the work has additional images
-    if (meta.additional_imgs.length) {
+    if (meta.additional_imgs && meta.additional_imgs.length) {
       // if so iterate through the array of them and create an img element for them, appending them to the dom
       for (let i = 0, len = meta.additional_imgs.length; i < len; i++) {
         const newFigure = document.createElement("img");
