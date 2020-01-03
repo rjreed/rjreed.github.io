@@ -35,7 +35,7 @@
   // function to iterate through the list of works and run the appendNewItem for each one
   const galleryBuilder = function() {
     const obj = JSON.parse(this.response);
-    const keys = Object.keys(obj);
+    const keys = Object.keys(obj).reverse();
 
     for (let i = 0, len = keys.length; i < len; i++) {
       appendNewItem(obj[keys[i]]);
