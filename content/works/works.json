@@ -141,5 +141,35 @@
     "upload_date": 1578149149196,
     "additional_imgs": [],
     "img": "./content/works/bea15efa8d753ad4c54fd35452e2b544/bea15efa8d753ad4c54fd35452e2b544_0.jpg"
+  },
+  "ee6e74536a124135bb8542e5c8b7a77b": {
+    "available": [
+      "paintings",
+      "true"
+    ],
+    "title": "Metal Pitcher with Mandarin",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "12\" x 9\"",
+    "date": "2020-01",
+    "id": "ee6e74536a124135bb8542e5c8b7a77b",
+    "upload_date": 1578149704134,
+    "additional_imgs": [],
+    "img": "./content/works/ee6e74536a124135bb8542e5c8b7a77b/ee6e74536a124135bb8542e5c8b7a77b_0.jpg"
+  },
+  "7bc3295a735933b6740694e7811eecf6": {
+    "available": [
+      "paintings",
+      "true"
+    ],
+    "title": "Small Pot with Spoon and Tomato",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "8\" x 10\"",
+    "date": "2020-01",
+    "id": "7bc3295a735933b6740694e7811eecf6",
+    "upload_date": 1578149738163,
+    "additional_imgs": [],
+    "img": "./content/works/7bc3295a735933b6740694e7811eecf6/7bc3295a735933b6740694e7811eecf6_0.jpg"
   }
 }
