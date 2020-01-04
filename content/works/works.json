@@ -126,5 +126,20 @@
     "upload_date": 1573223295055,
     "additional_imgs": [],
     "img": "./content/works/0794a3a7b3d792ecfc09c10fc8ab5107/0794a3a7b3d792ecfc09c10fc8ab5107_0.jpg"
+  },
+  "bea15efa8d753ad4c54fd35452e2b544": {
+    "available": [
+      "paintings",
+      "true"
+    ],
+    "title": "Three Poblanos",
+    "artist": "Rocky Reed",
+    "medium": "Oil and Acrylic on Canvas Panel",
+    "size": "14\" x 11\"",
+    "date": "2020-12",
+    "id": "bea15efa8d753ad4c54fd35452e2b544",
+    "upload_date": 1578149149196,
+    "additional_imgs": [],
+    "img": "./content/works/bea15efa8d753ad4c54fd35452e2b544/bea15efa8d753ad4c54fd35452e2b544_0.jpg"
   }
 }
