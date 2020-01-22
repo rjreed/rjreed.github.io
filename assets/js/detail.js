@@ -56,18 +56,17 @@
     elements.medium.innerText = meta.medium;
     elements.size.innerText = meta.size;
     elements.date.innerText = meta.date.split("-")[0];
-    
+
+    /*
     // check if the work is available
-    if (meta.available == 'true') {
-      console.log('available');
-     
-      
+    if (meta.available == 'true') { 
       elements.button.value = "Available - show price";
     } else {
       elements.button.classList.remove(classes.button_active);
       elements.button.classList.add(classes.button_disabled);
       elements.button.value = "Private Collection";
     }
+    */
 
     // check if the work has additional images
     if (meta.additional_imgs && meta.additional_imgs.length) {
