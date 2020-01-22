@@ -10,7 +10,10 @@
     size: "detail_caption_size",
     date: "detail_caption_date",
     additional: "detail_additional",
-    additional_figure: "detail_additional_figure"
+    additional_figure: "detail_additional_figure",
+    button: "detail_button",
+    button_active: "button",
+    button_disabled: "button-disabled"
   };
 
   // get nodes based off above css selector classes
@@ -23,7 +26,8 @@
     medium: document.getElementsByClassName(classes.medium)[0],
     size: document.getElementsByClassName(classes.size)[0],
     date: document.getElementsByClassName(classes.date)[0],
-    additional: document.getElementsByClassName(classes.additional)[0]
+    additional: document.getElementsByClassName(classes.additional)[0],
+    button: document.getElementsByClassName(classes.button)[0]
   };
 
   // get the id provided in the window URL
@@ -54,8 +58,15 @@
     elements.date.innerText = meta.date.split("-")[0];
     
     // check if the work is available
-    if (!meta.available) {
+    if (meta.available == 'true') {
+      console.log('available');
+     
       
+      elements.button.value = "Available - show price";
+    } else {
+      elements.button.classList.remove(classes.button_active);
+      elements.button.classList.add(classes.button_disabled);
+      elements.button.value = "Private Collection";
     }
 
     // check if the work has additional images
