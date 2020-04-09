@@ -171,5 +171,53 @@
     "upload_date": 1578149738163,
     "additional_imgs": [],
     "img": "./content/works/7bc3295a735933b6740694e7811eecf6/7bc3295a735933b6740694e7811eecf6_0.jpg"
+  },
+  "de8b4dc347683839e5178c42bf45b561": {
+    "available": [
+      "paintings",
+      "true"
+    ],
+    "title": "Study of an Anjou Pear",
+    "artist": "Rocky Reed",
+    "medium": "Oil on Canvas Panel",
+    "size": "8\" x 10\"",
+    "date": "2020-04",
+    "sku": "",
+    "id": "de8b4dc347683839e5178c42bf45b561",
+    "upload_date": 1586468794253,
+    "additional_imgs": [],
+    "img": "./content/works/de8b4dc347683839e5178c42bf45b561/de8b4dc347683839e5178c42bf45b561_0.jpg"
+  },
+  "fcb4be35885ba4d050879660a80c5718": {
+    "available": [
+      "paintings",
+      "true"
+    ],
+    "title": "Spoons and Jar",
+    "artist": "Rocky Reed",
+    "medium": "Oil and Acrylic on Panel",
+    "size": "8\" x 10\"",
+    "date": "2020-01",
+    "sku": "",
+    "id": "fcb4be35885ba4d050879660a80c5718",
+    "upload_date": 1586468842034,
+    "additional_imgs": [],
+    "img": "./content/works/fcb4be35885ba4d050879660a80c5718/fcb4be35885ba4d050879660a80c5718_0.jpg"
+  },
+  "8439700ad77f322f77dfadef3a0b71a7": {
+    "available": [
+      "paintings",
+      "true"
+    ],
+    "title": "Metal pitcher with Lemon and Silverware",
+    "artist": "Rocky Reed",
+    "medium": "Acrylic on Panel",
+    "size": "11\" x 14\"",
+    "date": "2020-04",
+    "sku": "",
+    "id": "8439700ad77f322f77dfadef3a0b71a7",
+    "upload_date": 1586468895567,
+    "additional_imgs": [],
+    "img": "./content/works/8439700ad77f322f77dfadef3a0b71a7/8439700ad77f322f77dfadef3a0b71a7_0.jpg"
   }
 }
