@@ -1,0 +1,53 @@
+/* CONTACT SUBGRID */
+.contact_form_input {
+  border: none;
+  border: 1px solid #ddddd5;
+  display: block;
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 10px;
+}
+
+/* TODO flex this */
+.contact_social_line_text {
+  display: inline-block;
+  line-height: 1.5rem;
+  vertical-align: top;
+  padding-left: 0.5rem;
+}
+
+.contact_social_icon {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  fill: #6182B8;
+}
+
+/* TODO clean this */
+a:hover .contact_social_icon {
+  fill: #a7bbe0;
+}
+
+.input_message {
+  height: 25rem;
+}
+
+.input_submit {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding: 0;
+  text-align: center;
+  line-height: 30px;
+  background-color: #ecece4;
+  border-radius: 5px;
+  transition: all 0.2s;
+  border: 0;
+}
+
+.input_submit:hover {
+  background-color: #d2d2ca;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=contact.css.map */

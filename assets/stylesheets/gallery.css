@@ -1,0 +1,67 @@
+/* GALLERY SPECIFIC TILES */
+.grid-4-to-3 > .gallery-tile {
+  width: calc(25% - 0.75rem);
+  display: flex;
+  max-height: 100%;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid-4-to-3 > .gallery-tile:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .grid-4-to-3 > .gallery-tile {
+    display: flex;
+    width: calc(33% - 0.66rem);
+    margin-right: 1.05rem;
+  }
+
+  .grid-4-to-3 > .gallery-tile:nth-of-type(4n) {
+    margin-right: 1rem;
+  }
+
+  .grid-4-to-3 > .gallery-tile:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+.gallery-tile {
+  margin-bottom: 1rem;
+  display: flex;
+  max-height: 100%;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.gallery-tile-figure {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  align-self: center;
+}
+
+.gallery-tile-caption {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.gallery-tile img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+  height: auto;
+}
+
+.gallery-tile:hover > img {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*# sourceMappingURL=gallery.css.map */

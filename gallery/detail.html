@@ -11,17 +11,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Crimson+Pro|Open+Sans:300,400,600,700" rel="stylesheet" />
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="/assets/stylesheets/layout.css" />
     <link rel="stylesheet" href="/assets/stylesheets/typography.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/lightbox.css?nocache=5" />
+    <link rel="stylesheet" href="/assets/stylesheets/detail.css" />
 
     <!-- SCRIPTS -->
     <script src="/assets/scripts/utils.js" defer></script>
     <script src="/assets/scripts/menuslider.js" defer></script>
     <script src="/assets/scripts/index.js" defer></script>
+    <script src="/assets/scripts/detail.js" defer></script>
+    <script src="/assets/scripts/lightbox.js?nocache=5" defer></script>
+
 
 </head>
 
@@ -65,20 +71,35 @@
     </header>
 
     <!-- CONTENT -->
-    <section class="splash content grow grid-2-to-1">
-        <div class="tile flex-center">
-            <img class="" src="/content/images/splash.jpg" />
-        </div>
-        <div class="tile tile-text-centered">
-          
-                <div class="decorative-label pad-bottom"> The art of</div>
-                <div class="heading-2"> Rocky J. Reed</div>
-          
-        </div>
+    <section class="container-lg grow center">
+
+        <!-- item detail, populates from js script -->
+        <section class="content js-detail grid-75-25-to-1">
+
+            <!-- item images -->
+            <div class="js-detail-main detail tile">
+                <div class="js-detail-link">
+                    <img class="js-detail-item js-lightbox-enabled" src="" alt="" data-str="" />
+                </div>
+                <div class="js-detail-additional grid-4"></div>
+            </div>
+
+            <!-- item information / metadata -->
+            <div class="js-detail-caption sm tile">
+                <div class="js-detail-caption-title med margin-bottom"></div>
+                <div class="js-detail-caption-medium margin-bottom"></div>
+                <div class="js-detail-caption-size margin-bottom"></div>
+                <div class="js-detail-caption-date margin-bottom"></div>
+                <div class="js-detail-caption-description margin-bottom warm-grey-7"></div>
+                <div class="js-detail-caption-collection light-red margin-bottom"></div>
+                <a href="" target="_blank" class="button js-detail-button enquire_btn detail_button"></a>
+            </div>
+
+        </section>
     </section>
 
     <!-- FOOTER -->
-    <section class="footer sm vertical-center upperline">
+    <section class="footer sm dark grey vertical-center upperline">
         © Rocky J. Reed 2020
     </section>
 </body>

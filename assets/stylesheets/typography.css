@@ -1,0 +1,736 @@
+/*
+ ***********
+IMPORTS
+***********
+*/
+/* 
+***********
+FONT SIZING
+***********
+*/
+.xs {
+  font-size: 0.5rem;
+}
+
+.sm {
+  font-size: 0.8rem;
+}
+
+.med {
+  font-size: 1rem;
+}
+
+.lg {
+  font-size: 1.3rem;
+}
+
+.xl {
+  font-size: 1.5rem;
+}
+
+.xxl {
+  font-size: 2rem;
+}
+
+/* 
+***********
+FONT WEIGHTS
+***********
+*/
+.hairline {
+  font-weight: 100;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.heavy {
+  font-weight: 900;
+}
+
+/* 
+***********
+FONT FAMILIES
+***********
+*/
+.sans {
+  font-family: "Open Sans";
+}
+
+.serif {
+  font-family: "Crimson Pro";
+}
+
+.handwritten {
+  font-family: "Ma Shan Zheng", cursive;
+}
+
+/* 
+ ***********
+FONT STYLES
+***********
+*/
+.italic {
+  font-style: italic;
+}
+
+/*
+ ***********
+TOP-LEVEL
+***********
+*/
+body {
+  line-height: 1.375em;
+  font-family: "Open Sans";
+  font-weight: 300;
+  color: #1d1f21;
+  font-kerning: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #1d1f21;
+}
+
+h1 {
+  font: 300 2rem "Crimson Pro";
+  color: #4c4d48;
+}
+
+h2 {
+  font: 300 1.5rem "Crimson Pro";
+  color: #4c4d48;
+}
+
+h3 {
+  font: 700 1rem "Open Sans";
+  color: #1d1f21;
+}
+
+h4 {
+  font: 700 1.3rem "Crimson Pro";
+  color: #1d1f21;
+}
+
+h5 {
+  font: 700 1.3rem "Open Sans";
+  color: #1d1f21;
+}
+
+/* 
+***********
+GROUPED STYLES
+***********
+*/
+.heading-1 {
+  font: 300 1.5rem "Crimson Pro";
+  color: #4c4d48;
+}
+
+.heading-2 {
+  font: 300 2rem "Crimson Pro";
+  color: #4c4d48;
+}
+
+.heading-3 {
+  font: 700 1rem "Open Sans";
+  color: #1d1f21;
+}
+
+.heading-4 {
+  font: 700 1.3rem "Crimson Pro";
+  color: #1d1f21;
+}
+
+.heading-5 {
+  font: 700 1.3rem "Open Sans";
+  color: #1d1f21;
+}
+
+.link-1 {
+  font-weight: 500;
+  color: #6182B8;
+}
+
+.link-1:hover {
+  color: #a7bbe0;
+}
+
+.link-2 {
+  font-weight: 400;
+  color: #6182B8;
+}
+
+.link-2:hover {
+  color: #a7bbe0;
+}
+
+.link-3 {
+  color: #1d1f21;
+}
+
+.link-3:hover {
+  color: #a8a9a4;
+}
+
+.decorative-label {
+  font-family: "Crimson Pro";
+  color: #94958f;
+  font-style: italic;
+}
+
+.large-label {
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-family: "Open Sans";
+}
+
+.medium-label {
+  font: 600 1.3rem "Open Sans";
+  color: #94958f;
+}
+
+.drop-cap::first-letter {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/*
+***********
+FONT COLORS
+***********
+*/
+.warm-grey-00 {
+  color: #f3f3eb;
+}
+
+.warm-grey-0 {
+  color: #ecece4;
+}
+
+.warm-grey-1 {
+  color: #e7e7df;
+}
+
+.warm-grey-2 {
+  color: #ddddd5;
+}
+
+.warm-grey-3 {
+  color: #d2d2ca;
+}
+
+.warm-grey-4 {
+  color: #bcbdb7;
+}
+
+.warm-grey-5 {
+  color: #a8a9a4;
+}
+
+.warm-grey-6 {
+  color: #94958f;
+}
+
+.warm-grey-7 {
+  color: #777873;
+}
+
+.warm-grey-8 {
+  color: #63645f;
+}
+
+.warm-grey-9 {
+  color: #4c4d48;
+}
+
+.warm-grey-10 {
+  color: #302f2b;
+}
+
+.cool-grey-00 {
+  color: #e0e7ed;
+}
+
+.cool-grey-0 {
+  color: #e0e7ed;
+}
+
+.cool-grey-1 {
+  color: #dae3e8;
+}
+
+.cool-grey-2 {
+  color: #ccd7dd;
+}
+
+.cool-grey-3 {
+  color: #c1ccd2;
+}
+
+.cool-grey-4 {
+  color: #92a0ab;
+}
+
+.cool-grey-5 {
+  color: #92a0ab;
+}
+
+.cool-grey-6 {
+  color: #637079;
+}
+
+.cool-grey-7 {
+  color: #637079;
+}
+
+.cool-grey-8 {
+  color: #535d66;
+}
+
+.cool-grey-9 {
+  color: #3c474d;
+}
+
+.cool-grey-10 {
+  color: #202b31;
+}
+
+.nuetral-grey-00 {
+  color: #eceeed;
+}
+
+.nuetral-grey-0 {
+  color: #eceeed;
+}
+
+.nuetral-grey-1 {
+  color: #e2e3e5;
+}
+
+.nuetral-grey-2 {
+  color: #dadbdd;
+}
+
+.nuetral-grey-3 {
+  color: #d1d2d4;
+}
+
+.nuetral-grey-4 {
+  color: #bcbdc1;
+}
+
+.nuetral-grey-5 {
+  color: #a8a9ad;
+}
+
+.nuetral-grey-6 {
+  color: #949599;
+}
+
+.nuetral-grey-7 {
+  color: #77787c;
+}
+
+.nuetral-grey-8 {
+  color: #636466;
+}
+
+.nuetral-grey-9 {
+  color: #4c4d4f;
+}
+
+.nuetral-grey-10 {
+  color: #312f30;
+}
+
+.toner-grey-00 {
+  color: #eceeed;
+}
+
+.toner-grey-0 {
+  color: #eceeed;
+}
+
+.toner-grey-1 {
+  color: #eaeae8;
+}
+
+.toner-grey-2 {
+  color: #e0e0de;
+}
+
+.toner-grey-3 {
+  color: #d1d2cc;
+}
+
+.toner-grey-4 {
+  color: #bcbbb9;
+}
+
+.toner-grey-5 {
+  color: #a8a7a3;
+}
+
+.toner-grey-6 {
+  color: #949590;
+}
+
+.toner-grey-7 {
+  color: #777674;
+}
+
+.toner-grey-8 {
+  color: #63645f;
+}
+
+.toner-grey-9 {
+  color: #4c4b49;
+}
+
+.toner-grey-10 {
+  color: #322e2d;
+}
+
+.warm-grey-00-hover:hover {
+  color: #f3f3eb;
+}
+
+.warm-grey-0-hover:hover {
+  color: #ecece4;
+}
+
+.warm-grey-1-hover:hover {
+  color: #e7e7df;
+}
+
+.warm-grey-2-hover:hover {
+  color: #ddddd5;
+}
+
+.warm-grey-3-hover:hover {
+  color: #d2d2ca;
+}
+
+.warm-grey-4-hover:hover {
+  color: #bcbdb7;
+}
+
+.warm-grey-5-hover:hover {
+  color: #a8a9a4;
+}
+
+.warm-grey-6-hover:hover {
+  color: #94958f;
+}
+
+.warm-grey-7-hover:hover {
+  color: #777873;
+}
+
+.warm-grey-8-hover:hover {
+  color: #63645f;
+}
+
+.warm-grey-9-hover:hover {
+  color: #4c4d48;
+}
+
+.warm-grey-10-hover:hover {
+  color: #302f2b;
+}
+
+.cool-grey-00-hover:hover {
+  color: #e0e7ed;
+}
+
+.cool-grey-0-hover:hover {
+  color: #e0e7ed;
+}
+
+.cool-grey-1-hover:hover {
+  color: #dae3e8;
+}
+
+.cool-grey-2-hover:hover {
+  color: #ccd7dd;
+}
+
+.cool-grey-3-hover:hover {
+  color: #c1ccd2;
+}
+
+.cool-grey-4-hover:hover {
+  color: #92a0ab;
+}
+
+.cool-grey-5-hover:hover {
+  color: #92a0ab;
+}
+
+.cool-grey-6-hover:hover {
+  color: #637079;
+}
+
+.cool-grey-7-hover:hover {
+  color: #637079;
+}
+
+.cool-grey-8-hover:hover {
+  color: #535d66;
+}
+
+.cool-grey-9-hover:hover {
+  color: #3c474d;
+}
+
+.cool-grey-10-hover:hover {
+  color: #202b31;
+}
+
+.nuetral-grey-00-hover:hover {
+  color: #eceeed;
+}
+
+.nuetral-grey-0-hover:hover {
+  color: #eceeed;
+}
+
+.nuetral-grey-1-hover:hover {
+  color: #e2e3e5;
+}
+
+.nuetral-grey-2-hover:hover {
+  color: #dadbdd;
+}
+
+.nuetral-grey-3-hover:hover {
+  color: #d1d2d4;
+}
+
+.nuetral-grey-4-hover:hover {
+  color: #bcbdc1;
+}
+
+.nuetral-grey-5-hover:hover {
+  color: #a8a9ad;
+}
+
+.nuetral-grey-6-hover:hover {
+  color: #949599;
+}
+
+.nuetral-grey-7-hover:hover {
+  color: #77787c;
+}
+
+.nuetral-grey-8-hover:hover {
+  color: #636466;
+}
+
+.nuetral-grey-9-hover:hover {
+  color: #4c4d4f;
+}
+
+.nuetral-grey-10-hover:hover {
+  color: #312f30;
+}
+
+.toner-grey-00-hover:hover {
+  color: #eceeed;
+}
+
+.toner-grey-0-hover:hover {
+  color: #eceeed;
+}
+
+.toner-grey-1-hover:hover {
+  color: #eaeae8;
+}
+
+.toner-grey-2-hover:hover {
+  color: #e0e0de;
+}
+
+.toner-grey-3-hover:hover {
+  color: #d1d2cc;
+}
+
+.toner-grey-4-hover:hover {
+  color: #bcbbb9;
+}
+
+.toner-grey-5-hover:hover {
+  color: #a8a7a3;
+}
+
+.toner-grey-6-hover:hover {
+  color: #949590;
+}
+
+.toner-grey-7-hover:hover {
+  color: #777674;
+}
+
+.toner-grey-8-hover:hover {
+  color: #63645f;
+}
+
+.toner-grey-9-hover:hover {
+  color: #4c4b49;
+}
+
+.toner-grey-10-hover:hover {
+  color: #322e2d;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.light-grey {
+  color: #d2d2ca;
+}
+
+.hover-light-grey:hover {
+  color: #d2d2ca;
+}
+
+.medium-grey {
+  color: #a8a9a4;
+}
+
+.hover-medium-grey:hover {
+  color: #a8a9a4;
+}
+
+.dark-grey {
+  color: #302f2b;
+}
+
+.hover-dark-grey:hover {
+  color: #302f2b;
+}
+
+.off-black {
+  color: #1d1f21;
+}
+
+.hover-off-black:hover {
+  color: #1d1f21;
+}
+
+.orange {
+  color: #f99157;
+}
+
+.hover-orange:hover {
+  color: #f99157;
+}
+
+.light-green {
+  color: #c3e88d;
+}
+
+.hover-light-green:hover {
+  color: #c3e88d;
+}
+
+.light-violet {
+  color: #BB80B3;
+}
+
+.hover-light-violet:hover {
+  color: #BB80B3;
+}
+
+.violet {
+  color: #945EB8;
+}
+
+.hover-violet:hover {
+  color: #945EB8;
+}
+
+.yellow-orange {
+  color: #FFB62C;
+}
+
+.hover-yellow-orange:hover {
+  color: #FFB62C;
+}
+
+.yellow {
+  color: #fef200;
+}
+
+.hover-yellow:hover {
+  color: #fef200;
+}
+
+.green {
+  color: #91B859;
+}
+
+.hover-green:hover {
+  color: #91B859;
+}
+
+.light-blue {
+  color: #a7bbe0;
+}
+
+.hover-light-blue:hover {
+  color: #a7bbe0;
+}
+
+.blue {
+  color: #6182B8;
+}
+
+.hover-blue:hover {
+  color: #6182B8;
+}
+
+.light-red {
+  color: #f2777a;
+}
+
+.red {
+  color: #E53935;
+}
+
+.hover-light-red:hover {
+  color: #f2777a;
+}
+
+.hover-red:hover {
+  color: #E53935;
+}
+
+/*# sourceMappingURL=typography.css.map */
