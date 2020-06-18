@@ -22,7 +22,7 @@ function __lightbox() {
     display_container: 'js-lightbox-display-container',
     display: 'js-lightbox-display',
     close: 'js-lightbox-close',
-    caption: 'js-lightbox-caption',
+    caption: 'js-lightbox-caption'
   };
 
   //// define css classes for styling
@@ -32,7 +32,7 @@ function __lightbox() {
     display_container: 'lightbox-display-container',
     display: 'lightbox-display',
     close: 'lightbox-close',
-    caption: 'lightbox-caption',
+    caption: 'lightbox-caption'
   };
 
   /// DOM Nodes
@@ -46,7 +46,7 @@ function __lightbox() {
     display_container: document.createElement('div'),
     display: document.createElement('img'),
     close: document.createElement('div'),
-    caption: document.createElement('div'),
+    caption: document.createElement('div')
   };
 
   //// init empty galleries object
