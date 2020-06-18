@@ -7,10 +7,10 @@
 // APP
 (function() {
 
-  // SELECTORS
-
   window.addEventListener('load', function(event) {
 
+
+    // SELECTORS
     const selectors = {};
 
     /// CSS Class Map
