@@ -7,9 +7,6 @@
 // APP
 (function() {
 
-  window.addEventListener('load', function(event) {
-
-
     // SELECTORS
     const selectors = {};
 
@@ -29,18 +26,16 @@
     //// toggle for dropdown visibility
     let dropdown_visible = false;
 
-    //// hack since scrollheight is returning an inconsistent value
-    // let dropdown_height = (nodes.dropdown.scrollHeight > 167 ? nodes.dropdown.scrollHeight : 200) + "px";
-
-    let dropdown_height = nodes.dropdown.scrollHeight + 'px';
-
     //// function to handle clicks on the dropdown toggle node
     function click_handler(e) {
 
       if (!dropdown_visible && e.target.classList.contains(selectors.hooks.toggle)) {
         //// show dropdown
         dropdown_visible = true;
-        nodes.dropdown.style.maxHeight = dropdown_height;
+        //// set max-height to the scrollHeight of the element
+        /* note: had this variable scoped up but had to wait for window load, this is more consistent with
+         resizing pages, dynamic heights, etc. */
+        nodes.dropdown.style.maxHeight = nodes.dropdown.scrollHeight + 'px';
       } else if (
         (dropdown_visible && e.target.classList.contains(selectors.hooks.toggle)) ||
         !nodes.dropdown.contains(e.target)
@@ -53,5 +48,5 @@
 
     //// add click_handler event listener to document
     document.addEventListener("click", click_handler);
-  });
+
 })();
