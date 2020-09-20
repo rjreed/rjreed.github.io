@@ -55,7 +55,7 @@ br {
 
 /*
 ***********
-UTILITY CLASSES
+UTILITY CLASSES / HACKS
 ***********
 */
 .center {
@@ -64,7 +64,7 @@ UTILITY CLASSES
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .justify-center {

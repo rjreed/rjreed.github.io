@@ -62,7 +62,7 @@ br {
 
 /*
 ***********
-UTILITY CLASSES
+UTILITY CLASSES / HACKS
 ***********
 */
 
@@ -72,7 +72,7 @@ UTILITY CLASSES
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .justify-center {
@@ -229,7 +229,6 @@ FLEXBOX GRIDS
     margin-bottom: 1rem;
     
 }
-
 
 .tile img {
     width: 100%;

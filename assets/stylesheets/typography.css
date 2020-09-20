@@ -142,6 +142,10 @@ h5 {
   color: #1d1f21;
 }
 
+p {
+  text-indent: 3rem;
+}
+
 /* 
 ***********
 GROUPED STYLES
