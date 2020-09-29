@@ -8,7 +8,7 @@
 
 // APP
 (async function() {
-  const display_limit = 18;
+  const display_limit = 40;
 
   /// CSS Selectors
 
