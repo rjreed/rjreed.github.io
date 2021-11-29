@@ -42,7 +42,7 @@
   const _timestamp = (Math.round(time / 9e5) * 9e5);
 
   //// path to send XHR request to get artworks json array back
-  const artwork_bucket_uri = 'https://s3-us-west-2.amazonaws.com/rockyjreed.com/artwork/';
+  const artwork_bucket_uri = 'https://s3.us-west-2.amazonaws.com/rockyjreed.com/artwork/';
   const artworks_uri = artwork_bucket_uri + 'index_sorted.json?limitcache=' + _timestamp;
 
   //// object to hold references to the different galleries

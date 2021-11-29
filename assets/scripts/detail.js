@@ -56,7 +56,7 @@ the S3 files for the artwork images
   const time = new Date();
   const timestamp = (Math.round(time / 9e5) * 9e5);
 
-  const artwork_bucket_uri = 'https://s3-us-west-2.amazonaws.com/rockyjreed.com/artwork/';
+  const artwork_bucket_uri = 'https://s3.us-west-2.amazonaws.com/rockyjreed.com/artwork/';
   const json_uri = artwork_bucket_uri + 'index.json?limitcache=' + timestamp;
 
   const store_uri = 'https://store.rockyjreed.com';
