@@ -8,8 +8,6 @@ the S3 files for the artwork images
 
 //// IMPORTS 
 import { urls } from './urls.js';
-import { utils } from './utils.js';
-
 
 //// APP
 (async function() {
@@ -17,19 +15,19 @@ import { utils } from './utils.js';
   const selectors = {};
 
   selectors.hooks = {
-    container: "detail",
-    link: "js-detail-link",
-    item: "js-detail-item",
-    caption: "js-detail-item-caption",
-    title: "js-detail-caption-title",
-    description: "js-detail-caption-description",
-    medium: "js-detail-caption-medium",
-    size: "js-detail-caption-size",
-    date: "js-detail-caption-date",
-    collection: "js-detail-caption-collection",
-    additional: "js-detail-additional",
-    additional_figure: "js-detail-additional-figure",
-    button: "js-detail-button"
+    container: ".detail",
+    link: ".js-detail-link",
+    item: ".js-detail-item",
+    caption: ".js-detail-item-caption",
+    title: ".js-detail-caption-title",
+    description: ".js-detail-caption-description",
+    medium: ".js-detail-caption-medium",
+    size: ".js-detail-caption-size",
+    date: ".js-detail-caption-date",
+    collection: ".js-detail-caption-collection",
+    additional: ".js-detail-additional",
+    additional_figure: ".js-detail-additional-figure",
+    button: ".js-detail-button"
   };
 
   selectors.styles = {
@@ -39,20 +37,23 @@ import { utils } from './utils.js';
     button_disabled: "button-disabled"
   };
 
+  // covenience function to shorten document.querySelector
+  const $qs = (hook) => document.querySelector(hook);
+
   // get nodes based off above css selector selectors.hooks
   const nodes = {
-    container: document.getElementsByClassName(selectors.hooks.container)[0],
-    item: document.getElementsByClassName(selectors.hooks.item)[0],
-    link: document.getElementsByClassName(selectors.hooks.link)[0],
-    figure: document.getElementsByClassName(selectors.hooks.figure)[0],
-    title: document.getElementsByClassName(selectors.hooks.title)[0],
-    description: document.getElementsByClassName(selectors.hooks.description)[0],
-    medium: document.getElementsByClassName(selectors.hooks.medium)[0],
-    size: document.getElementsByClassName(selectors.hooks.size)[0],
-    date: document.getElementsByClassName(selectors.hooks.date)[0],
-    collection: document.getElementsByClassName(selectors.hooks.collection)[0],
-    additional: document.getElementsByClassName(selectors.hooks.additional)[0],
-    button: document.getElementsByClassName(selectors.hooks.button)[0]
+    container: $qs(selectors.hooks.container),
+    item: $qs(selectors.hooks.item),
+    link: $qs(selectors.hooks.link),
+    figure: $qs(selectors.hooks.figure),
+    title: $qs(selectors.hooks.title),
+    description: $qs(selectors.hooks.description),
+    medium: $qs(selectors.hooks.medium),
+    size: $qs(selectors.hooks.size),
+    date: $qs(selectors.hooks.date),
+    collection: $qs(selectors.hooks.collection),
+    additional: $qs(selectors.hooks.additional),
+    button: $qs(selectors.hooks.button)
   };
 
 
@@ -66,20 +67,11 @@ import { utils } from './utils.js';
   // send the request for the index and parse the results
   let dataset = await fetch(artwork_index_url).then(res => res.json());
 
-  //// polyfill-ish function for searchParams for ie11
-  const query_string = (function(a) {
-    if (a == "") return {};
-    let b = {};
-    for (let i = 0; i < a.length; ++i) {
-      let p = a[i].split("=", 2);
-      if (p.length == 1) b[p[0]] = "";
-      else b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-    }
-    return b;
-  })(window.location.search.substr(1).split("&"));
+  // get query string
+  const params = new URLSearchParams(window.location.search);
 
   //// get the id provided in the window URL query string 
-  const uid = query_string["uid"];
+  const uid = params.get("uid");
 
   //// check if the item exists and populate the caption node, otherwise delete the node so it doesn't affect layout
   function check_and_set(node, item) {
@@ -106,7 +98,7 @@ import { utils } from './utils.js';
 
     //// check if the work is available and add a link to the store to the button if so
     if (data.available == 'true') {
-      nodes.button.dataset.href = 'data.uid';
+      nodes.button.dataset.href = data.uid;
       nodes.button.innerText = "Available in Store";
       if (data.url) {
         nodes.button.href = data.url;
@@ -160,10 +152,9 @@ import { utils } from './utils.js';
     }, 350);
   }
 
- console.log(dataset)
   for (let i = 0, len = dataset.length; i < len; i++) {
     if (dataset[i].uid === uid) {
-     
+
       detail_builder(dataset[i]);
     }
   }
