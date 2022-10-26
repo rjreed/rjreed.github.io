@@ -119,7 +119,7 @@ import { urls } from './urls.js';
         const newFigure = document.createElement("img");
 
         newFigure.setAttribute("src", urls.artwork + data.uid + '/' + data.additional_images[i]);
-        newFigure.setAttribute("class", selectors.hooks.additional_figure);
+        newFigure.setAttribute("class", selectors.hooks.additional_figure.substring(1));
 
         tile.classList.add(selectors.styles.tile);
         tile.appendChild(newFigure);
