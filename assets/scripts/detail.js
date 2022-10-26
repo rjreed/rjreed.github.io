@@ -79,7 +79,7 @@ import { urls } from './urls.js';
       node.innerText = item;
     }
     else {
-      node.parentNode.removeChild(node);
+      node.remove();
     }
   }
 
@@ -108,7 +108,7 @@ import { urls } from './urls.js';
       }
     }
     else {
-      nodes.button.parentNode.removeChild(nodes.button);
+      nodes.button.remove();
     }
 
     // check if the work has additional images
