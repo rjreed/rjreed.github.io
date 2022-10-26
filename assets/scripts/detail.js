@@ -144,7 +144,7 @@ import { urls } from './urls.js';
     nodes.item.style.opacity = 0;
 
     //swap the src attributes and show the images after 350 ms, which matches the css transition property time
-    setTimeout(function() {
+    setTimeout(() => {
       nodes.item.setAttribute("src", src1);
       e.target.setAttribute("src", src2);
       e.target.style.opacity = 1;
