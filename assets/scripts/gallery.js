@@ -8,6 +8,7 @@
 
 //// IMPORTS 
 import { urls } from './urls.js';
+import { utils } from './utils.js';
 
 //// APP
 (async function() {
@@ -47,7 +48,7 @@ import { urls } from './urls.js';
   const _timestamp = (Math.round(time / 9e5) * 9e5);
 
   // path to send XHR request to get artworks index json array back
-  const artwork_index_url = `${urls.artwork}index_sorted.json?limitcache=${_timestamp}`;
+  const artwork_index_url = `${urls.index_sorted}?limitcache=${_timestamp}`;
 
   // send the request for the index and parse the results
   let dataset = await fetch(artwork_index_url).then(res => res.json());
@@ -62,19 +63,11 @@ import { urls } from './urls.js';
     galleries[gallery_name].limit = 0;
   }
 
-  // utility function to split an array into chunks
-  // todo move this to utils maybe
-  function chunk(arr, chunk_size) {
-    var _array = [];
-    for (let i = 0, length = arr.length; i < length; i += chunk_size)
-      _array.push(arr.slice(i, i + chunk_size));
-    return _array;
-  }
-
+  
   // function to create the artworks display gallery in the admin panel
   function build_gallery(data) {
 
-    const chunked = chunk(data, display_limit);
+    const chunked = utils.chunk(data, display_limit);
 
     // function to build a sub gallery for the "chunk" array
     function build_sub_gallery(arr, gallery) {
@@ -84,7 +77,6 @@ import { urls } from './urls.js';
 
         // create dom nodes for the tile
         const tile = document.createElement('a');
-        const overlay = document.createElement('div');
         const img = document.createElement('img');
         const caption = document.createElement('div');
         const caption_2 = document.createElement('div');
@@ -103,22 +95,14 @@ import { urls } from './urls.js';
         tile.classList.add(selectors.styles.panel_tile);
         caption.classList.add(selectors.styles.caption);
         caption_2.classList.add(selectors.styles.caption);
-        overlay.classList.add(selectors.styles.panel_tile_overlay);
-
-        if (galleries[item.gallery].limit > display_limit) {
-          tile.classList.add(selectors.styles.hidden);
-        }
 
         // add text to the nodes
         caption.innerText = item.title;
         caption_2.innerText = item.medium;
 
         // append the child nodes to the tile node
-        // tile.appendChild(overlay);
         tile.appendChild(img);
-
         tile.appendChild(caption);
-        //tile.appendChild(caption_2);
 
         // append it to the container node
         gallery.appendChild(tile);

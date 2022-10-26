@@ -5,9 +5,9 @@ const urls = {
 
   s3: s3,
   artwork: `${s3}artwork/`,
-  covers: `${s3}images/covers/`,
-  datasets: `${s3}datasets/`,
-  table_index: `${s3}datasets/table_index.json`
+  index: `${s3}artwork/index.json`,
+  index_sorted: `${s3}artwork/index_sorted.json`,
+  store: 'https://store.rockyjreed.com'
 };
 
 //// EXPORTS

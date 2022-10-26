@@ -1,4 +1,4 @@
-// ABOUT
+//// ABOUT
 
 /*
 This is a function to request the index.json file containing artwork info from the S3 bucket,
@@ -6,11 +6,14 @@ match an entry against the uid in the query string, and populate the nodes with 
 the S3 files for the artwork images
 */
 
+//// IMPORTS 
+import { urls } from './urls.js';
+import { utils } from './utils.js';
 
-// APP
-(function() {
+
+//// APP
+(async function() {
   // define css selector classes
-
   const selectors = {};
 
   selectors.hooks = {
@@ -52,14 +55,16 @@ the S3 files for the artwork images
     button: document.getElementsByClassName(selectors.hooks.button)[0]
   };
 
-  //// hack to limit caching to 15 minute intervals for the index.json file
+
+  // add timestamp to query string to prevent caching in 15 minute intervals
   const time = new Date();
-  const timestamp = (Math.round(time / 9e5) * 9e5);
+  const _timestamp = (Math.round(time / 9e5) * 9e5);
 
-  const artwork_bucket_uri = 'https://s3.us-west-2.amazonaws.com/rockyjreed.com/artwork/';
-  const json_uri = artwork_bucket_uri + 'index.json?limitcache=' + timestamp;
+  // path to send XHR request to get artworks index json array back
+  const artwork_index_url = `${urls.index}?limitcache=${_timestamp}`;
 
-  const store_uri = 'https://store.rockyjreed.com';
+  // send the request for the index and parse the results
+  let dataset = await fetch(artwork_index_url).then(res => res.json());
 
   //// polyfill-ish function for searchParams for ie11
   const query_string = (function(a) {
@@ -80,7 +85,8 @@ the S3 files for the artwork images
   function check_and_set(node, item) {
     if (item && item.length) {
       node.innerText = item;
-    } else {
+    }
+    else {
       node.parentNode.removeChild(node);
     }
   }
@@ -88,8 +94,8 @@ the S3 files for the artwork images
   //// set attributes of the detail node based of parsed data
   const detail_builder = function(data) {
 
-    nodes.link.setAttribute("href", artwork_bucket_uri + data.uid + '/' + data.primary_image);
-    nodes.item.setAttribute("src", artwork_bucket_uri + data.uid + '/' + data.primary_image);
+    nodes.link.setAttribute("href", urls.artwork + data.uid + '/' + data.primary_image);
+    nodes.item.setAttribute("src", urls.artwork + data.uid + '/' + data.primary_image);
     nodes.title.innerText = data.title || 'untitled';
 
     check_and_set(nodes.description, data.description);
@@ -104,10 +110,12 @@ the S3 files for the artwork images
       nodes.button.innerText = "Available in Store";
       if (data.url) {
         nodes.button.href = data.url;
-      } else {
-        nodes.button.href = store_uri;
       }
-    } else {
+      else {
+        nodes.button.href = urls.store;
+      }
+    }
+    else {
       nodes.button.parentNode.removeChild(nodes.button);
     }
 
@@ -118,7 +126,7 @@ the S3 files for the artwork images
         const tile = document.createElement('div');
         const newFigure = document.createElement("img");
 
-        newFigure.setAttribute("src", artwork_bucket_uri + data.uid + '/' + data.additional_images[i]);
+        newFigure.setAttribute("src", urls.artwork + data.uid + '/' + data.additional_images[i]);
         newFigure.setAttribute("class", selectors.hooks.additional_figure);
 
         tile.classList.add(selectors.styles.tile);
@@ -152,21 +160,14 @@ the S3 files for the artwork images
     }, 350);
   }
 
-  // Create XHR to get works list JSON and run detail_builder on it
-  const xhr = new XMLHttpRequest();
-
-  xhr.open("GET", json_uri, true);
-
-  xhr.addEventListener("load", function(response) {
-    const artworks = JSON.parse(this.response);
-
-    for (let i = 0, len = artworks.length; i < len; i++) {
-      if (artworks[i].uid === uid) {
-        return detail_builder(artworks[i]);
-      }
+ console.log(dataset)
+  for (let i = 0, len = dataset.length; i < len; i++) {
+    if (dataset[i].uid === uid) {
+     
+      detail_builder(dataset[i]);
     }
+  }
 
-  });
-
-  xhr.send();
 })();
+
+/* global fetch */
