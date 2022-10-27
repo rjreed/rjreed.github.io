@@ -87,8 +87,7 @@ function __lightbox() {
       selectors.styles.caption
     );
 
-    nodes.lightbox.style.visibility = 'hidden';
-    nodes.lightbox.style.opacity = 0;
+    nodes.lightbox.classList.add('hidden');
 
     //// add X text to close button node
     nodes.close.innerText = 'X';
@@ -111,11 +110,6 @@ function __lightbox() {
     const view_height = document.documentElement.clientHeight;
     const view_width = document.documentElement.clientWidth;
 
-    //// show the lightbox
-    nodes.lightbox.style.display = 'flex';
-    nodes.lightbox.style.visibility = 'visible';
-    nodes.lightbox.style.opacity = 1;
-
     //// assign lightbox_display's src as either the target's data_lightbox_alt or its src
     nodes.display.src = e.target.dataset.lightbox_alt || e.target.src;
 
@@ -123,6 +117,17 @@ function __lightbox() {
     //// this seems to respond to orientation changes without refresh
     nodes.display.style.maxWidth = ((85 / 100) * view_width) + 'px';
     nodes.display.style.maxHeight = ((85 / 100) * view_height) + 'px';
+
+    //// show the lightbox
+
+
+    nodes.lightbox.classList.remove('hidden');
+    setTimeout(()=>{
+      nodes.lightbox.style.opacity = 1;
+    }, 10)
+    
+
+
 
     //// if the node has a 'data-caption', add the text from it to the lightbox display caption
     if (e.target.dataset['caption']) {
@@ -138,12 +143,20 @@ function __lightbox() {
       if (nodes.images[i].dataset.gallery) {
         if (galleries[nodes.images[i].dataset.gallery]) {
           galleries[nodes.images[i].dataset.gallery].push(nodes.images[i]);
-        } else {
+        }
+        else {
           galleries[nodes.images[i].dataset.gallery] = [];
           galleries[nodes.images[i].dataset.gallery].push(nodes.images[i]);
         }
       }
     }
+  }
+
+  function hide() {
+    nodes.lightbox.style.opacity = 0;
+    setTimeout(() => {
+      nodes.lightbox.classList.add('hidden');
+    }, 300);
   }
 
   /* TODO: add functionality for galleries */
@@ -160,17 +173,13 @@ function __lightbox() {
     //// check that the click isn't on a child element (the form)
     if (e.target !== e.currentTarget) return;
     //// hide the lightbox
-    nodes.lightbox.style.display = 'none';
-    nodes.lightbox.style.visibility = 'hidden';
-    nodes.lightbox.style.opacity = 0;
+    hide();
   });
 
   //// add event listener to close button to hide lightbox
   nodes.close.addEventListener('click', function(e) {
     //// hide the lightbox
-    nodes.lightbox.style.display = 'none';
-    nodes.lightbox.style.visibility = 'hidden';
-    nodes.lightbox.style.opacity = 0;
+    hide();
   });
 
   //// add event listener to hide lightbox on escape keypress
@@ -178,9 +187,7 @@ function __lightbox() {
     const key = event.key;
     if (key === 'Escape') {
       //// hide the lightbox
-      nodes.lightbox.style.display = 'none';
-      nodes.lightbox.style.visibility = 'hidden';
-      nodes.lightbox.style.opacity = 0;
+      hide();
     }
   });
 
