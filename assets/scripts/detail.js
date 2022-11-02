@@ -37,24 +37,12 @@ import { urls } from './urls.js';
     button_disabled: "button-disabled"
   };
 
-  // covenience function to shorten document.querySelector
-  const $qs = (hook) => document.querySelector(hook);
-
   // get nodes based off above css selector selectors.hooks
-  const nodes = {
-    container: $qs(selectors.hooks.container),
-    item: $qs(selectors.hooks.item),
-    link: $qs(selectors.hooks.link),
-    figure: $qs(selectors.hooks.figure),
-    title: $qs(selectors.hooks.title),
-    description: $qs(selectors.hooks.description),
-    medium: $qs(selectors.hooks.medium),
-    size: $qs(selectors.hooks.size),
-    date: $qs(selectors.hooks.date),
-    collection: $qs(selectors.hooks.collection),
-    additional: $qs(selectors.hooks.additional),
-    button: $qs(selectors.hooks.button)
-  };
+  const nodes = {};
+  
+  Object.keys(selectors.hooks).forEach(i => {
+      nodes[i] = document.querySelector(selectors.hooks[i]); 
+   });
 
 
   // add timestamp to query string to prevent caching in 15 minute intervals
