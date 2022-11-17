@@ -53,6 +53,7 @@ import { utils } from './utils.js';
   // send the request for the index and parse the results
   let dataset = await fetch(artwork_index_url).then(res => res.json());
 
+
   // object to hold references to the different galleries
   let galleries = {};
 
@@ -63,7 +64,7 @@ import { utils } from './utils.js';
     galleries[gallery_name].limit = 0;
   }
 
-  
+
   // function to create the artworks display gallery in the admin panel
   function build_gallery(data) {
 
@@ -128,6 +129,12 @@ import { utils } from './utils.js';
   }
 
   Object.keys(dataset).forEach(function(item, index) {
+/*
+    // sort the dallery items by upload_date
+    dataset[item].sort((a, b) => {
+      return b['upload_date'] - a['upload_date'];
+    });
+*/
     if (galleries[item]) {
       build_gallery(dataset[item]);
 

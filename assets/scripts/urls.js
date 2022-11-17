@@ -1,5 +1,5 @@
 //// APP
-const s3 = 'https://s3.us-west-2.amazonaws.com/rockyjreed.com/';
+const s3 = 'https://s3-us-west-2.amazonaws.com/rockyjreed-artwork/';
 
 const urls = {
 
